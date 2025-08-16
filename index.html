@@ -3,602 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rajesh Prashanth - DevOps & Automation Engineer</title>
-    <meta name="description" content="DevOps Engineer passionate about automation, security, and cloud-native technologies. Violin enthusiast who automates things for fun.">
+    <title>Rajesh Prashanth - Tech Enthusiast & Automation Engineer</title>
+    <meta name="description" content="Tech Enthusiast passionate about automation, security, and cloud-native technologies. Violinist who automates things for fun.">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: #f8f9fa;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        /* Header */
-        .header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 60px 0;
-            text-align: center;
-        }
-
-        .profile-section {
-            margin-bottom: 40px;
-        }
-
-        .profile-image {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.2);
-            margin: 0 auto 30px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border: 4px solid rgba(255, 255, 255, 0.3);
-        }
-
-        .profile-image i {
-            font-size: 60px;
-            color: rgba(255, 255, 255, 0.9);
-        }
-
-        .header h1 {
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 10px;
-        }
-
-        .header .subtitle {
-            font-size: 1.2rem;
-            opacity: 0.9;
-            margin-bottom: 30px;
-        }
-
-        .social-links {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            flex-wrap: wrap;
-        }
-
-        .social-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            padding: 12px 24px;
-            background: rgba(255, 255, 255, 0.2);
-            color: white;
-            text-decoration: none;
-            border-radius: 30px;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            border: 2px solid rgba(255, 255, 255, 0.3);
-        }
-
-        .social-link:hover {
-            background: rgba(255, 255, 255, 0.3);
-            border-color: rgba(255, 255, 255, 0.5);
-            transform: translateY(-2px);
-        }
-
-        /* Main Content */
-        .main-content {
-            padding: 60px 0;
-        }
-
-        .section {
-            margin-bottom: 60px;
-            background: white;
-            padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        .section-title {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            margin-bottom: 30px;
-            font-size: 2rem;
-            color: #333;
-            border-bottom: 3px solid #667eea;
-            padding-bottom: 15px;
-        }
-
-        .section-title i {
-            color: #667eea;
-            font-size: 2rem;
-        }
-
-        /* About Section */
-        .about-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
-            margin-bottom: 30px;
-        }
-
-        .about-card {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-            padding: 25px;
-            background: #f8f9fa;
-            border-radius: 10px;
-            border-left: 4px solid #667eea;
-            transition: all 0.3s ease;
-        }
-
-        .about-card:hover {
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-            transform: translateY(-3px);
-        }
-
-        .about-card i {
-            font-size: 2.5rem;
-            color: #667eea;
-        }
-
-        .about-card-content h3 {
-            font-size: 1.2rem;
-            margin-bottom: 5px;
-            color: #333;
-        }
-
-        .about-card-content p {
-            color: #666;
-            font-size: 0.9rem;
-        }
-
-        .quote {
-            background: #e3f2fd;
-            border-left: 4px solid #2196f3;
-            padding: 20px;
-            margin: 30px 0;
-            border-radius: 0 8px 8px 0;
-            font-style: italic;
-            color: #1565c0;
-            font-size: 1.1rem;
-        }
-
-        /* Repository Profiles */
-        .repo-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-            gap: 30px;
-        }
-
-        .repo-card {
-            padding: 40px;
-            border-radius: 12px;
-            text-align: center;
-            color: white;
-            transition: all 0.3s ease;
-        }
-
-        .repo-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-        }
-
-        .github-card {
-            background: linear-gradient(135deg, #24292e 0%, #40464e 100%);
-        }
-
-        .gitlab-card {
-            background: linear-gradient(135deg, #fc6d26 0%, #e24329 100%);
-        }
-
-        .repo-header {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 20px;
-            margin-bottom: 25px;
-        }
-
-        .repo-header i {
-            font-size: 3rem;
-        }
-
-        .repo-header h3 {
-            font-size: 1.8rem;
-            font-weight: 600;
-        }
-
-        .repo-description {
-            font-size: 1rem;
-            margin-bottom: 25px;
-            opacity: 0.9;
-            line-height: 1.6;
-        }
-
-        .repo-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            padding: 12px 30px;
-            background: rgba(255, 255, 255, 0.2);
-            color: white;
-            text-decoration: none;
-            border-radius: 30px;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            border: 2px solid rgba(255, 255, 255, 0.3);
-        }
-
-        .repo-link:hover {
-            background: rgba(255, 255, 255, 0.3);
-            border-color: rgba(255, 255, 255, 0.5);
-        }
-
-        /* Projects Grid */
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 25px;
-        }
-
-        .project-card {
-            background: #f8f9fa;
-            border: 1px solid #e9ecef;
-            border-radius: 10px;
-            padding: 30px;
-            transition: all 0.3s ease;
-        }
-
-        .project-card:hover {
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-            transform: translateY(-3px);
-            border-color: #667eea;
-        }
-
-        .project-card h3 {
-            color: #667eea;
-            font-size: 1.3rem;
-            margin-bottom: 15px;
-        }
-
-        .project-card p {
-            color: #666;
-            margin-bottom: 20px;
-            line-height: 1.6;
-        }
-
-        .project-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            color: #667eea;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s ease;
-        }
-
-        .project-link:hover {
-            color: #764ba2;
-            transform: translateX(5px);
-        }
-
-        /* Tech Stack */
-        .tech-section {
-            margin-bottom: 40px;
-        }
-
-        .tech-section h3 {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-size: 1.4rem;
-            color: #667eea;
-            margin-bottom: 20px;
-        }
-
-        .tech-badges {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-        }
-
-        .tech-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            padding: 8px 16px;
-            background: #e3f2fd;
-            color: #1565c0;
-            border-radius: 20px;
-            font-size: 0.9rem;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            border: 2px solid transparent;
-        }
-
-        .tech-badge:hover {
-            background: #667eea;
-            color: white;
-            transform: scale(1.05);
-        }
-
-        /* Working On */
-        .working-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-        }
-
-        .working-item {
-            display: flex;
-            align-items: flex-start;
-            gap: 20px;
-            padding: 25px;
-            background: #f8f9fa;
-            border-radius: 10px;
-            transition: all 0.3s ease;
-            border-left: 4px solid #667eea;
-        }
-
-        .working-item:hover {
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-            transform: translateY(-3px);
-        }
-
-        .working-item i {
-            font-size: 2rem;
-            color: #667eea;
-            margin-top: 5px;
-        }
-
-        .working-content h4 {
-            font-size: 1.1rem;
-            margin-bottom: 8px;
-            color: #333;
-        }
-
-        .working-content p {
-            color: #666;
-            font-size: 0.9rem;
-        }
-
-        /* Stats */
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
-        }
-
-        .stat-card {
-            background: #f8f9fa;
-            border: 1px solid #e9ecef;
-            border-radius: 10px;
-            padding: 25px;
-            text-align: center;
-            transition: all 0.3s ease;
-        }
-
-        .stat-card:hover {
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-            transform: translateY(-3px);
-        }
-
-        .stat-card h4 {
-            color: #333;
-            margin-bottom: 20px;
-            font-size: 1.2rem;
-        }
-
-        .stat-card img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 8px;
-        }
-
-        /* Fun Facts */
-        .facts-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
-        }
-
-        .fact-item {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-            padding: 25px;
-            background: #f8f9fa;
-            border-radius: 10px;
-            transition: all 0.3s ease;
-            border-left: 4px solid #667eea;
-        }
-
-        .fact-item:hover {
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-            transform: translateY(-3px);
-        }
-
-        .fact-item i {
-            font-size: 2rem;
-            color: #667eea;
-        }
-
-        .fact-content h4 {
-            font-size: 1.1rem;
-            margin-bottom: 5px;
-            color: #333;
-        }
-
-        .fact-content p {
-            color: #666;
-            font-size: 0.9rem;
-        }
-
-        /* Connect Topics */
-        .connect-topics {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 15px;
-            margin: 30px 0;
-        }
-
-        .connect-topic {
-            padding: 15px;
-            background: #e3f2fd;
-            color: #1565c0;
-            border-radius: 8px;
-            text-align: center;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            border: 2px solid transparent;
-        }
-
-        .connect-topic:hover {
-            background: #667eea;
-            color: white;
-            transform: scale(1.05);
-        }
-
-        /* Support Section */
-        .support-actions {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-            margin: 30px 0;
-        }
-
-        .support-btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            padding: 15px 30px;
-            color: white;
-            text-decoration: none;
-            border-radius: 30px;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            text-align: center;
-        }
-
-        .github-btn {
-            background: linear-gradient(135deg, #24292e 0%, #40464e 100%);
-        }
-
-        .gitlab-btn {
-            background: linear-gradient(135deg, #fc6d26 0%, #e24329 100%);
-        }
-
-        .support-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-        }
-
-        /* Footer */
-        .footer {
-            background: #333;
-            color: white;
-            text-align: center;
-            padding: 40px 0;
-            margin-top: 60px;
-        }
-
-        .footer-quote {
-            font-size: 1.3rem;
-            font-style: italic;
-            margin-bottom: 20px;
-            color: #667eea;
-        }
-
-        .profile-views {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            padding: 8px 20px;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 20px;
-            font-size: 0.9rem;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .container {
-                padding: 0 15px;
-            }
-
-            .header h1 {
-                font-size: 2rem;
-            }
-
-            .section {
-                padding: 25px;
-            }
-
-            .section-title {
-                font-size: 1.6rem;
-            }
-
-            .social-links {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .repo-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .projects-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .stats-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .header {
-                padding: 40px 0;
-            }
-
-            .header h1 {
-                font-size: 1.8rem;
-            }
-
-            .repo-header {
-                flex-direction: column;
-                gap: 15px;
-            }
-
-            .repo-header i {
-                font-size: 2.5rem;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
     <header class="header">
         <div class="container">
             <div class="profile-section">
                 <div class="profile-image">
-                    <i class="fas fa-user-tie"></i>
+                    <img src="assets/images/profile.jpg" alt="Rajesh Prashanth" />
                 </div>
-                <h1>Hi there! I'm Rajesh Prasanth</h1>
-                <p class="subtitle">DevOps Engineer | Automation Enthusiast | Violin Player</p>
+                <h1>Hi there! I'm Rajesh Prashanth</h1>
+                <p class="subtitle">Tech Enthusiast | Automation Enthusiast | Home Lab Architect | Violinst</p>
             </div>
 
             <div class="social-links">
+                <a href="https://rphomelab.in" target="_blank" class="social-link">
+                    <i class="fas fa-home"></i> Home Lab
+                </a>
                 <a href="https://linkedin.com/in/rajeshprasanth" target="_blank" class="social-link">
                     <i class="fab fa-linkedin"></i> LinkedIn
                 </a>
@@ -660,6 +84,103 @@
                 </div>
             </section>
 
+            <!-- Home Lab Portfolio -->
+            <section class="section">
+                <h2 class="section-title">
+                    <i class="fas fa-home"></i>
+                    My Home Lab Portfolio
+                </h2>
+
+                <div style="text-align: center; margin-bottom: 40px;">
+                    <p style="font-size: 1.2rem; color: #666; margin-bottom: 30px;">
+                        Dive deep into my comprehensive home lab environment where I experiment, learn, and deploy cutting-edge technologies.
+                    </p>
+
+                    <a href="https://rphomelab.in" target="_blank" style="
+                        display: inline-flex;
+                        align-items: center;
+                        gap: 15px;
+                        padding: 20px 40px;
+                        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                        color: white;
+                        text-decoration: none;
+                        border-radius: 50px;
+                        font-weight: 700;
+                        font-size: 1.3rem;
+                        transition: all 0.3s ease;
+                        box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+                        border: 3px solid transparent;
+                    " onmouseover="this.style.transform='translateY(-5px) scale(1.05)'; this.style.boxShadow='0 15px 35px rgba(102, 126, 234, 0.4)'" onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.boxShadow='0 8px 25px rgba(102, 126, 234, 0.3)'">
+                        <i class="fas fa-external-link-alt" style="font-size: 1.2rem;"></i>
+                        Visit rphomelab.in
+                    </a>
+                </div>
+
+                <div class="about-grid">
+                    <div class="about-card">
+                        <i class="fas fa-network-wired"></i>
+                        <div class="about-card-content">
+                            <h3>Infrastructure Setup</h3>
+                            <p>Detailed documentation of my home lab hardware, networking, and architecture</p>
+                        </div>
+                    </div>
+                    <div class="about-card">
+                        <i class="fab fa-docker"></i>
+                        <div class="about-card-content">
+                            <h3>Self-Hosted Services</h3>
+                            <p>Running 20+ containerized applications for productivity, monitoring, and entertainment</p>
+                        </div>
+                    </div>
+                    <div class="about-card">
+                        <i class="fas fa-chart-line"></i>
+                        <div class="about-card-content">
+                            <h3>Monitoring & Observability</h3>
+                            <p>Complete monitoring stack with Grafana, Prometheus, and custom dashboards</p>
+                        </div>
+                    </div>
+                    <div class="about-card">
+                        <i class="fas fa-graduation-cap"></i>
+                        <div class="about-card-content">
+                            <h3>Learning Projects</h3>
+                            <p>Tutorials, experiments, and hands-on projects for fellow enthusiasts</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="background: #f8f9fa; padding: 30px; border-radius: 12px; margin-top: 30px; border-left: 5px solid #667eea;">
+                    <h3 style="color: #667eea; margin-bottom: 20px; display: flex; align-items: center; gap: 10px;">
+                        <i class="fas fa-lightbulb"></i>
+                        What You'll Find on rphomelab.in
+                    </h3>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 20px;">
+                        <div style="display: flex; align-items: flex-start; gap: 12px;">
+                            <i class="fas fa-check-circle" style="color: #28a745; margin-top: 3px;"></i>
+                            <span>Step-by-step setup guides and tutorials</span>
+                        </div>
+                        <div style="display: flex; align-items: flex-start; gap: 12px;">
+                            <i class="fas fa-check-circle" style="color: #28a745; margin-top: 3px;"></i>
+                            <span>Docker Compose configurations for popular services</span>
+                        </div>
+                        <div style="display: flex; align-items: flex-start; gap: 12px;">
+                            <i class="fas fa-check-circle" style="color: #28a745; margin-top: 3px;"></i>
+                            <span>Network architecture and security implementations</span>
+                        </div>
+                        <div style="display: flex; align-items: flex-start; gap: 12px;">
+                            <i class="fas fa-check-circle" style="color: #28a745; margin-top: 3px;"></i>
+                            <span>Performance monitoring and optimization tips</span>
+                        </div>
+                        <div style="display: flex; align-items: flex-start; gap: 12px;">
+                            <i class="fas fa-check-circle" style="color: #28a745; margin-top: 3px;"></i>
+                            <span>Automation scripts and infrastructure as code</span>
+                        </div>
+                        <div style="display: flex; align-items: flex-start; gap: 12px;">
+                            <i class="fas fa-check-circle" style="color: #28a745; margin-top: 3px;"></i>
+                            <span>Troubleshooting guides and lessons learned</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             <!-- Repository Profiles -->
             <section class="section">
                 <h2 class="section-title">
@@ -711,41 +232,81 @@
 
                 <div class="projects-grid">
                     <div class="project-card">
-                        <h3>home-lab-dashboard-flask</h3>
-                        <p>A Flask-based dashboard for monitoring and managing home lab environments with real-time metrics and intuitive controls.</p>
+                        <h3>rphomelab.in ⭐</h3>
+                        <p>My personal lab for experimenting with technology, automation, and infrastructure. Complete documentation and showcase of home lab setup.</p>
+                        <a href="https://github.com/rajeshprasanth/rphomelab.in" target="_blank" class="project-link">
+                            <i class="fab fa-github"></i> View Project
+                        </a>
+                    </div>
+
+                    <div class="project-card">
+                        <h3>ansible-playbooks</h3>
+                        <p>Comprehensive collection of Ansible playbooks for automating home lab infrastructure provisioning, configuration, deployment, and maintenance tasks.</p>
+                        <a href="https://github.com/rajeshprasanth/ansible-playbooks" target="_blank" class="project-link">
+                            <i class="fab fa-github"></i> View Project
+                        </a>
+                    </div>
+
+                    <div class="project-card">
+                        <h3>notifications</h3>
+                        <p>Lightweight Bash script to send formatted notifications to Telegram and Slack based on environment (dev/prod). Perfect for CI/CD pipelines and monitoring alerts.</p>
+                        <a href="https://github.com/rajeshprasanth/notifications" target="_blank" class="project-link">
+                            <i class="fab fa-github"></i> View Project
+                        </a>
+                    </div>
+
+                    <div class="project-card">
+                        <h3>SSL_Certificate_Generator</h3>
+                        <p>Bash script to create local Root CA and generate SSL certificates (wildcard/non-wildcard) for domains, with automatic signing and logging capabilities.</p>
+                        <a href="https://github.com/rajeshprasanth/SSL_Certificate_Generator" target="_blank" class="project-link">
+                            <i class="fab fa-github"></i> View Project
+                        </a>
+                    </div>
+
+                    <div class="project-card">
+                        <h3>simplified-dashboard</h3>
+                        <p>Flask-based web application displaying resource links from CSV using Bootstrap. Supports local execution, Docker deployment, and remote image retrieval.</p>
+                        <a href="https://github.com/rajeshprasanth/simplified-dashboard" target="_blank" class="project-link">
+                            <i class="fab fa-github"></i> View Project
+                        </a>
+                    </div>
+
+                    <div class="project-card">
+                        <h3>home-lab-dashboard-flask ⭐</h3>
+                        <p>Flask-based web application for managing and monitoring home lab environments with user-friendly interface for seamless interaction and control.</p>
                         <a href="https://github.com/rajeshprasanth/home-lab-dashboard-flask" target="_blank" class="project-link">
                             <i class="fab fa-github"></i> View Project
                         </a>
                     </div>
 
                     <div class="project-card">
-                        <h3>kpath</h3>
-                        <p>Python tool for generating high-symmetry points in band structure calculations for materials science research.</p>
-                        <a href="https://github.com/rajeshprasanth/kpath" target="_blank" class="project-link">
+                        <h3>open-pcb-schematics</h3>
+                        <p>Curated collection of PCB layouts and electronic circuit schematics for personal projects, prototyping, and home lab experiments with various modules.</p>
+                        <a href="https://github.com/rajeshprasanth/open-pcb-schematics" target="_blank" class="project-link">
                             <i class="fab fa-github"></i> View Project
                         </a>
                     </div>
 
                     <div class="project-card">
-                        <h3>espresso-automation-scripts</h3>
-                        <p>Automation scripts and Jupyter notebooks for streamlining Quantum ESPRESSO computational workflows.</p>
-                        <a href="https://github.com/rajeshprasanth/espresso-automation-scripts" target="_blank" class="project-link">
+                        <h3>bludit-cms 🍴</h3>
+                        <p>Docker image for Bludit CMS, pre-configured with Nginx, PHP-FPM, and optional SSL support for easy containerized deployment and management.</p>
+                        <a href="https://github.com/rajeshprasanth/bludit-cms" target="_blank" class="project-link">
                             <i class="fab fa-github"></i> View Project
                         </a>
                     </div>
 
                     <div class="project-card">
-                        <h3>ansible-homelab</h3>
-                        <p>Comprehensive Ansible playbooks for automating home lab infrastructure deployment and management.</p>
-                        <a href="https://github.com/rajeshprasanth/ansible-homelab" target="_blank" class="project-link">
+                        <h3>HomeLab</h3>
+                        <p>Core home lab repository containing infrastructure configurations, automation scripts, and documentation for self-hosted solutions and experiments.</p>
+                        <a href="https://github.com/rajeshprasanth/HomeLab" target="_blank" class="project-link">
                             <i class="fab fa-github"></i> View Project
                         </a>
                     </div>
 
                     <div class="project-card">
-                        <h3>dockerized-tools</h3>
-                        <p>Collection of prebuilt Docker images for commonly used DevOps utilities and development tools.</p>
-                        <a href="https://github.com/rajeshprasanth/dockerized-tools" target="_blank" class="project-link">
+                        <h3>Automation_Scripts</h3>
+                        <p>Collection of automation scripts for various tasks including system administration, deployment automation, and workflow optimization for home lab environments.</p>
+                        <a href="https://github.com/rajeshprasanth/Automation_Scripts" target="_blank" class="project-link">
                             <i class="fab fa-github"></i> View Project
                         </a>
                     </div>
@@ -842,32 +403,6 @@
                 </div>
             </section>
 
-            <!-- GitHub Stats -->
-            <section class="section">
-                <h2 class="section-title">
-                    <i class="fas fa-chart-bar"></i>
-                    GitHub Statistics
-                </h2>
-
-                <div class="stats-grid">
-                    <div class="stat-card">
-                        <h4>GitHub Profile Stats</h4>
-                        <img src="https://github-readme-stats.vercel.app/api?username=rajeshprasanth&show_icons=true&theme=default" alt="GitHub Stats" />
-                    </div>
-                    <div class="stat-card">
-                        <h4>Most Used Languages</h4>
-                        <img src="https://github-readme-stats.vercel.app/api/top-langs?username=rajeshprasanth&layout=compact&theme=default" alt="Top Languages" />
-                    </div>
-                    <div class="stat-card">
-                        <h4>GitHub Achievements</h4>
-                        <img src="https://github-profile-trophy.vercel.app?username=rajeshprasanth&theme=flat&column=3&margin-w=8&margin-h=8" alt="GitHub Trophies" />
-                    </div>
-                    <div class="stat-card">
-                        <h4>Contribution Streak</h4>
-                        <img src="https://github-readme-streak-stats.herokuapp.com/?user=rajeshprasanth&theme=default" alt="GitHub Streak" />
-                    </div>
-                </div>
-            </section>
 
             <!-- Fun Facts -->
             <section class="section">
@@ -924,6 +459,7 @@
                     <div class="connect-topic">Infrastructure as Code</div>
                     <div class="connect-topic">Security Automation</div>
                     <div class="connect-topic">Home Lab Setups</div>
+                    <div class="connect-topic">Self-Hosted Solutions</div>
                     <div class="connect-topic">Cloud-Native Architecture</div>
                     <div class="connect-topic">Music & Technology</div>
                 </div>
@@ -956,64 +492,7 @@
     </footer>
 
     <script>
-        // Simple, stable JavaScript for enhanced user experience
-        document.addEventListener('DOMContentLoaded', function() {
-            // Smooth scroll for anchor links
-            const links = document.querySelectorAll('a[href^="#"]');
-            links.forEach(link => {
-                link.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    const target = document.querySelector(this.getAttribute('href'));
-                    if (target) {
-                        target.scrollIntoView({
-                            behavior: 'smooth',
-                            block: 'start'
-                        });
-                    }
-                });
-            });
 
-            // Add loading animation for images
-            const images = document.querySelectorAll('img');
-            images.forEach(img => {
-                img.addEventListener('load', function() {
-                    this.style.opacity = '1';
-                });
-                img.style.opacity = '0';
-                img.style.transition = 'opacity 0.3s ease';
-            });
-
-            // Simple click tracking for analytics (optional)
-            const externalLinks = document.querySelectorAll('a[target="_blank"]');
-            externalLinks.forEach(link => {
-                link.addEventListener('click', function() {
-                    // You can add analytics tracking here if needed
-                    console.log('External link clicked:', this.href);
-                });
-            });
-        });
-
-        // Simple fade-in animation for sections when they come into view
-        if ('IntersectionObserver' in window) {
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.style.opacity = '1';
-                        entry.target.style.transform = 'translateY(0)';
-                    }
-                });
-            }, {
-                threshold: 0.1,
-                rootMargin: '0px 0px -50px 0px'
-            });
-
-            document.querySelectorAll('.section').forEach(section => {
-                section.style.opacity = '0';
-                section.style.transform = 'translateY(20px)';
-                section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-                observer.observe(section);
-            });
-        }
     </script>
 </body>
 </html>
