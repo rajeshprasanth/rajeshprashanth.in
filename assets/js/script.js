@@ -1,5 +1,21 @@
 // Simple, stable JavaScript for enhanced user experience
 document.addEventListener('DOMContentLoaded', function() {
+    // Mobile navigation toggle
+    const navToggle = document.querySelector('.nav-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    if (navToggle && navLinks) {
+        navToggle.addEventListener('click', function() {
+            navLinks.classList.toggle('open');
+            navToggle.classList.toggle('active');
+        });
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', function() {
+                navLinks.classList.remove('open');
+                navToggle.classList.remove('active');
+            });
+        });
+    }
+
     // Smooth scroll for anchor links
     const links = document.querySelectorAll('a[href^="#"]');
     links.forEach(link => {
@@ -18,11 +34,16 @@ document.addEventListener('DOMContentLoaded', function() {
     // Add loading animation for images
     const images = document.querySelectorAll('img');
     images.forEach(img => {
-        img.addEventListener('load', function() {
-            this.style.opacity = '1';
-        });
         img.style.opacity = '0';
         img.style.transition = 'opacity 0.3s ease';
+        const reveal = function() {
+            this.style.opacity = '1';
+        };
+        if (img.complete) {
+            reveal.call(img);
+        } else {
+            img.addEventListener('load', reveal);
+        }
     });
 
     // Simple click tracking for analytics (optional)
