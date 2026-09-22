@@ -46,6 +46,35 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
+    // Copy fingerprint buttons
+    document.querySelectorAll('.pgp-copy-btn').forEach(btn => {
+        btn.addEventListener('click', function() {
+            const target = document.getElementById(this.dataset.copyTarget);
+            if (!target) return;
+            const text = target.textContent.replace(/\s+/g, ' ').trim();
+            const done = () => {
+                const original = this.innerHTML;
+                this.classList.add('is-copied');
+                this.innerHTML = '<i class="fas fa-check"></i> Copied!';
+                setTimeout(() => {
+                    this.classList.remove('is-copied');
+                    this.innerHTML = original;
+                }, 2000);
+            };
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+                navigator.clipboard.writeText(text).then(done);
+            } else {
+                const ta = document.createElement('textarea');
+                ta.value = text;
+                document.body.appendChild(ta);
+                ta.select();
+                document.execCommand('copy');
+                document.body.removeChild(ta);
+                done();
+            }
+        });
+    });
+
     // Simple click tracking for analytics (optional)
     const externalLinks = document.querySelectorAll('a[target="_blank"]');
     externalLinks.forEach(link => {

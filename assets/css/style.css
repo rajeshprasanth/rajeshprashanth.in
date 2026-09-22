@@ -890,6 +890,111 @@ body {
     color: var(--brand);
 }
 
+/* ============ PGP Panel ============ */
+.pgp-panel {
+    margin: 0 0 28px;
+    background: var(--surface-soft);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 28px 30px;
+}
+
+.pgp-panel-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+.pgp-panel-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border-radius: var(--radius-sm);
+    background: var(--brand-soft);
+    color: var(--brand);
+    font-size: 1.3rem;
+    flex-shrink: 0;
+}
+
+.pgp-panel-header h3 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin-bottom: 4px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.pgp-info-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.pgp-info-link:hover {
+    color: var(--brand);
+}
+
+.pgp-panel-header p {
+    color: var(--text-muted);
+    font-size: 0.88rem;
+}
+
+.pgp-details {
+    display: grid;
+    gap: 14px;
+    margin-bottom: 22px;
+}
+
+.pgp-detail {
+    display: grid;
+    gap: 6px;
+}
+
+.pgp-detail-label {
+    font-size: 0.78rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--text-muted);
+}
+
+.pgp-detail code,
+.pgp-detail span {
+    font-size: 0.92rem;
+    color: var(--text-primary);
+    word-break: break-word;
+}
+
+.pgp-fingerprint {
+    font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+    letter-spacing: 0.04em;
+    line-height: 1.7;
+}
+
+.pgp-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.pgp-actions .repo-link {
+    cursor: pointer;
+    font-family: inherit;
+}
+
+.pgp-copy-btn.is-copied {
+    border-color: var(--success);
+    color: var(--success);
+}
+
 /* ============ Footer ============ */
 .footer {
     background: var(--navy);
